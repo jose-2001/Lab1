@@ -518,7 +518,7 @@ public static String[] mergeArraysNoRep(int[] ar1,int[] ar2,int[] ar3)
 	String[] resultingArray;
 	if (ar1.length<=ar2.length&&ar1.length<=ar3.length){resultingArray = new String[ar1.length];}
 	if (ar2.length<=ar3.length&&ar2.length<=ar1.length){resultingArray = new String[ar2.length];}
-	if (ar3.length<=ar1.length&&ar3.length<=ar2.length){resultingArray = new String[ar3.length];}
+	else{resultingArray = new String[ar3.length];}
 	for(int i=0; i<resultingArray.length; i++)
 	{
 		if(ar1[i]!=ar2[i]&&ar1[i]!=ar3[i]&&ar2[i]!=ar3[i])
@@ -545,9 +545,9 @@ public static String[] mergeArraysNoRep(int[] ar1,int[] ar2,int[] ar3)
 public static int[] interceptArrays(int[] ar1,int[] ar2,int[] ar3)
 {
 	int[]resultingArray;
-	if (ar1.length>=ar2.length&&ar1.length>=ar3.length){resultingArray = new int[ar1.length];}
-	if (ar2.length>=ar3.length&&ar2.length>=ar1.length){resultingArray = new int[ar2.length];}
-	if (ar3.length>=ar1.length&&ar3.length>=ar2.length){resultingArray = new int[ar3.length];}
+	if (ar1.length<=ar2.length&&ar1.length<=ar3.length){resultingArray = new int[ar1.length];}
+	if (ar2.length<=ar3.length&&ar2.length<=ar1.length){resultingArray = new int[ar2.length];}
+	else{resultingArray = new int[ar3.length];}
 	int i=0; boolean exists1=false; boolean exists2=false; boolean quit=false; boolean alreadyThere=false;
 	for(; i<resultingArray.length; i++)
 	{
