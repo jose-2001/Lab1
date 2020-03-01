@@ -301,8 +301,8 @@ public class Lab1y2 {
                 case 17:
                     if(arrays)
                     {
-		    System.out.println("Which array do you want to rearange from least to greatest? (1, 2 or 3)");
-		    dec2=lector.nextInt(); lector.nextLine();
+		    do{System.out.println("Which array do you want to rearange from least to greatest? (1, 2 or 3)");
+		    dec2=lector.nextInt(); lector.nextLine();}while(dec2!=1||dec2!=2||dec2!=3);
 		    switch(dec2)
 		    {
 		    case 1:
@@ -522,13 +522,13 @@ public static String[] mergeArraysNoRep(int[] ar1,int[] ar2,int[] ar3)
 	for(int i=0; i<resultingArray.length; i++)
 	{
 		if(ar1[i]!=ar2[i]&&ar1[i]!=ar3[i]&&ar2[i]!=ar3[i])
-		{resultingArray[i]=""+ar1[i] +", "+ar1[2] +", "+ar1[3];}
+		{resultingArray[i]=""+ar1[i] +", "+ar2[i] +", "+ar3[i];}
 		if(ar1[i]!=ar2[i]&&ar1[i]==ar3[i])
-		{resultingArray[i]=""+ar1[i] +", "+ar1[2];}
+		{resultingArray[i]=""+ar1[i] +", "+ar2[i];}
 		if(ar1[i]==ar2[i]&&ar1[i]!=ar3[i])
-		{resultingArray[i]=""+ar1[i] +", "+ar1[3];}
+		{resultingArray[i]=""+ar1[i] +", "+ar3[i];}
 		if(ar1[i]!=ar2[i]&&ar1[i]!=ar3[i]&&ar2[i]==ar3[i])
-		{resultingArray[i]=""+ar1[i] +", "+ar1[2];}
+		{resultingArray[i]=""+ar1[i] +", "+ar2[i];}
 		if(ar1[i]==ar2[i]&&ar1[i]==ar3[i])
 		{resultingArray[i]=""+ar1[i];}
 	}
